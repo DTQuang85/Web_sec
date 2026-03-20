@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giới Thiệu - TechStore</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body class="site-page">
+<header th:replace="fragments/header :: siteHeader"></header>
+
+<main class="container page-shell py-4">
+    <section class="page-hero-mini">
+        <span class="page-kicker">Về TechStore</span>
+        <h1 class="page-title">Hệ Sinh Thái Công Nghệ Thế Hệ Mới</h1>
+        <p class="page-subtitle">Chúng tôi tập trung vào thiết bị chính hãng, giá minh bạch và dịch vụ hậu mãi rõ ràng cho mọi khách hàng.</p>
+    </section>
+
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb app-breadcrumb">
+            <li class="breadcrumb-item"><a href="/" th:href="@{/}">Trang Chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Giới Thiệu</li>
+        </ol>
+    </nav>
+
+    <section class="about-bold mb-4">
+        <div class="about-bold-intro">
+            <span class="about-chip">Core Identity</span>
+            <h2>Về TechStore</h2>
+            <p>TechStore là nền tảng bán thiết bị điện tử chính hãng, tập trung vào trải nghiệm mua sắm nhanh, minh bạch và dịch vụ hậu mãi tốt.</p>
+            <div class="about-stats">
+                <div><strong>100%</strong><span>Hàng chính hãng</span></div>
+                <div><strong>24h</strong><span>Phản hồi hỗ trợ</span></div>
+                <div><strong>4.9/5</strong><span>Mức hài lòng</span></div>
+            </div>
+        </div>
+
+        <div class="about-bold-grid">
+            <article class="about-feature-card">
+                <span class="about-feature-icon"><i class="bi bi-shield-check"></i></span>
+                <h6>Chính Hãng 100%</h6>
+                <p>Sản phẩm có nguồn gốc rõ ràng và bảo hành tiêu chuẩn.</p>
+            </article>
+            <article class="about-feature-card">
+                <span class="about-feature-icon"><i class="bi bi-tags-fill"></i></span>
+                <h6>Giá Cạnh Tranh</h6>
+                <p>Cập nhật giá liên tục và nhiều ưu đãi theo mùa.</p>
+            </article>
+            <article class="about-feature-card">
+                <span class="about-feature-icon"><i class="bi bi-headset"></i></span>
+                <h6>Hỗ Trợ Nhanh</h6>
+                <p>Tư vấn kỹ thuật và xử lý đơn hàng trong giờ làm việc.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer th:replace="fragments/footer :: siteFooter"></footer>
+</body>
+</html>

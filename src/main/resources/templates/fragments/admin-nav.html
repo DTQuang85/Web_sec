@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body>
+<aside th:fragment="adminSidebar(activePage)" class="admin-sidebar">
+    <h4>Quản Trị</h4>
+    <a href="/admin/root" th:href="@{/admin/root}" th:if="${currentUser != null and #strings.equalsIgnoreCase(#strings.replace(#strings.trim(currentUser.role), 'ROLE_', ''), 'SUPER_ADMIN')}" th:classappend="${activePage == 'root'} ? 'active'">Toàn Quyền</a>
+    <a href="/admin/dashboard" th:href="@{/admin/dashboard}" th:classappend="${activePage == 'dashboard'} ? 'active'">Bảng Điều Khiển</a>
+    <a href="/admin/users" th:href="@{/admin/users}" th:if="${currentUser != null and (#strings.equalsIgnoreCase(#strings.replace(#strings.trim(currentUser.role), 'ROLE_', ''), 'SUPER_ADMIN') or #strings.equalsIgnoreCase(#strings.replace(#strings.trim(currentUser.role), 'ROLE_', ''), 'ADMIN'))}" th:classappend="${activePage == 'users'} ? 'active'">Quản Lý Người Dùng</a>
+    <a href="/admin/products" th:href="@{/admin/products}" th:classappend="${activePage == 'products'} ? 'active'">Quản Lý Sản Phẩm</a>
+    <a href="/admin/orders" th:href="@{/admin/orders}" th:classappend="${activePage == 'orders'} ? 'active'">Quản Lý Đơn Hàng</a>
+    <a href="/" th:href="@{/}">Về Cửa Hàng</a>
+</aside>
+</body>
+</html>

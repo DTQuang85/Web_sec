@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tạo Tài Khoản Mới</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body class="site-page">
+<header th:replace="fragments/header :: siteHeader"></header>
+
+<main class="container page-shell py-4" style="max-width: 560px;">
+    <section class="page-hero-mini">
+        <span class="page-kicker">TechStore Account</span>
+        <h1 class="page-title">Tạo Tài Khoản Mới</h1>
+        <p class="page-subtitle">Đăng ký để nhận thông báo ưu đãi, theo dõi đơn hàng và mua sắm nhanh hơn.</p>
+    </section>
+
+<div class="container px-0" style="max-width: 520px;">
+    <div class="card panel-card">
+        <div class="card-body p-4">
+            <h3 class="mb-3">Tạo Tài Khoản Mới</h3>
+            <div class="alert alert-danger" th:if="${error}" th:text="${error}"></div>
+            <form method="post" th:action="@{/register}">
+                <div class="mb-3">
+                    <label class="form-label">Họ và tên</label>
+                    <input class="form-control" name="fullName" th:value="${fullName}" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tên đăng nhập</label>
+                    <input name="username" class="form-control" th:value="${username}" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input name="email" type="email" class="form-control" th:value="${email}" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mật khẩu</label>
+                    <input name="password" type="password" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Xác nhận mật khẩu</label>
+                    <input type="password" class="form-control" name="confirmPassword" required />
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+                    <label class="form-check-label" for="agreeTerms">Tôi đồng ý với điều khoản sử dụng</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" data-loading="true">Đăng Ký</button>
+            </form>
+            <p class="mt-3 mb-0 text-center">Đã có tài khoản? <a th:href="@{/login}">Đăng Nhập</a></p>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer th:replace="fragments/footer :: siteFooter"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hướng Dẫn Mua Hàng - TechStore</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body class="site-page">
+<header th:replace="fragments/header :: siteHeader"></header>
+
+<main class="container page-shell py-4">
+    <section class="page-hero-mini">
+        <span class="page-kicker">Trợ Giúp</span>
+        <h1 class="page-title">Hướng Dẫn Mua Hàng</h1>
+        <p class="page-subtitle">Hướng dẫn chi tiết từng bước để bạn có trải nghiệm mua sắm nhanh chóng và dễ dàng.</p>
+    </section>
+
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb app-breadcrumb">
+            <li class="breadcrumb-item"><a href="/" th:href="@{/}">Trang Chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Hướng Dẫn Mua Hàng</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-search text-primary me-2"></i>Bước 1: Tìm Kiếm & Lựa Chọn Sản Phẩm</h3>
+                <p>Sử dụng thanh tìm kiếm hoặc duyệt qua các danh mục sản phẩm. Bạn có thể:</p>
+                <ul>
+                    <li>Tìm kiếm bằng tên sản phẩm hoặc thương hiệu</li>
+                    <li>Lọc theo giá, loại sản phẩm, hoặc mức đánh giá</li>
+                    <li>Xem chi tiết sản phẩm, hình ảnh và đánh giá từ khách hàng khác</li>
+                    <li>Kiểm tra tình trạng kho hàng</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-cart-plus text-primary me-2"></i>Bước 2: Thêm Vào Giỏ Hàng</h3>
+                <p>Sau khi chọn sản phẩm:</p>
+                <ul>
+                    <li>Nhấn nút "Thêm Vào Giỏ" hoặc "Mua Ngay"</li>
+                    <li>Chọn số lượng sản phẩm cần mua</li>
+                    <li>Kiểm tra lại sản phẩm trong giỏ hàng</li>
+                    <li>Bạn có thể tiếp tục mua sắm hoặc đi đến thanh toán</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-box-seam text-primary me-2"></i>Bước 3: Kiểm Tra & Thanh Toán</h3>
+                <p>Tại trang giỏ hàng:</p>
+                <ul>
+                    <li>Xem lại danh sách sản phẩm và giá tiền</li>
+                    <li>Điều chỉnh số lượng hoặc xóa sản phẩm</li>
+                    <li>Nhập mã giảm giá (nếu có)</li>
+                    <li>Chọn phương thức thanh toán</li>
+                    <li>Nhấn "Thanh Toán" để hoàn tất</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-person-vcard text-primary me-2"></i>Bước 4: Nhập Thông Tin Giao Hàng</h3>
+                <p>Điền đầy đủ thông tin:</p>
+                <ul>
+                    <li>Họ và tên người nhận</li>
+                    <li>Địa chỉ giao hàng chi tiết</li>
+                    <li>Số điện thoại liên lạc</li>
+                    <li>Chọn phương thức vận chuyển</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-credit-card text-primary me-2"></i>Bước 5: Xác Nhận & Hoàn Thành Đơn Hàng</h3>
+                <p>Sau khi thực hiện thanh toán:</p>
+                <ul>
+                    <li>Bạn sẽ nhận email xác nhận đơn hàng</li>
+                    <li>Xem trạng thái đơn hàng tại "Đơn Hàng Của Tôi"</li>
+                    <li>Theo dõi tiến trình giao hàng qua mã vận đơn</li>
+                    <li>Nhận thông báo khi hàng được giao</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4">
+                <h3 class="mb-3"><i class="bi bi-question-circle text-primary me-2"></i>Câu Hỏi Thường Gặp</h3>
+                <div class="accordion" id="guideFaq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Tôi có thể mua hàng mà không cần đăng ký tài khoản không?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#guideFaq">
+                            <div class="accordion-body">
+                                Có, bạn có thể mua hàng với tư cách khách mua hàng không cần đăng ký. Tuy nhiên, đăng ký tài khoản sẽ giúp bạn theo dõi đơn hàng dễ dàng hơn và nhận những ưu đãi độc quyền.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Tôi có thể hủy đơn hàng sau khi đặt không?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#guideFaq">
+                            <div class="accordion-body">
+                                Bạn có thể hủy đơn hàng trong vòng 24 giờ sau khi đặt hàng. Liên hệ với bộ phận hỗ trợ khách hàng tại support@techstore.vn hoặc gọi 1900 1234 để được hỗ trợ.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Mã giảm giá có thể kết hợp với các chương trình khác không?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#guideFaq">
+                            <div class="accordion-body">
+                                Hầu hết các mã giảm giá không thể kết hợp với nhau. Điều kiện chi tiết sẽ được hiển thị khi bạn nhập mã. Vui lòng đọc kỹ các điều kiện trước khi sử dụng.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <aside class="col-lg-4">
+            <div class="panel-card p-4 sticky-top" style="top: 20px;">
+                <h5 class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i>Cần Hỗ Trợ?</h5>
+                <div class="d-grid gap-2">
+                    <a href="/contact" class="btn btn-primary btn-sm">
+                        <i class="bi bi-chat-dots me-2"></i>Liên Hệ Chúng Tôi
+                    </a>
+                    <a href="/payment" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-credit-card me-2"></i>Phương Thức Thanh Toán
+                    </a>
+                    <a href="/shipping" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-truck me-2"></i>Chính Sách Vận Chuyển
+                    </a>
+                    <a href="/returns" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-arrow-left-right me-2"></i>Chính Sách Đổi Trả
+                    </a>
+                </div>
+                <hr />
+                <p class="small mb-2"><strong>Email:</strong><br />support@techstore.vn</p>
+                <p class="small mb-0"><strong>Hotline:</strong><br />1900 1234 (8:00 - 22:00)</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer th:replace="fragments/footer :: siteFooter"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

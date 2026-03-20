@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="siteHeader" class="site-header">
+    <nav class="navbar navbar-expand-lg app-navbar shadow-sm">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center" href="/" th:href="@{/}">
+                <img class="logo" th:src="@{/images/logo.png}" alt="TechStore" style="width: 32px; height: 32px; margin-right: 6px;" />
+                <span class="fw-bold fs-6">Tech<span class="text-primary">Store</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteMainNav" aria-controls="siteMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="siteMainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/" th:href="@{/}">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/products" th:href="@{/products}">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about" th:href="@{/about}">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact" th:href="@{/contact}">Liên Hệ</a></li>
+                </ul>
+
+                <form id="searchForm" class="search-box" method="get" action="/products" th:action="@{/products}">
+                    <input id="keywordInput" type="text" class="form-control rounded-pill ps-4" name="keyword" th:value="${keyword}" placeholder="Tìm kiếm..." />
+                    <button class="btn btn-primary btn-sm px-3" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a class="btn btn-outline-primary btn-sm position-relative" href="/cart" th:href="@{/cart}">
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-count" th:text="${cartCount}">0</span>
+                    </a>
+
+                    <div class="dropdown" th:if="${currentUser != null}">
+                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i> <span th:text="${currentUser.username}">Tài Khoản</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm">
+                            <li class="px-3 py-2"><small class="text-muted">Đăng nhập với:</small><br/><strong th:text="${currentUser.username}"></strong></li>
+                            <li><hr class="dropdown-divider my-2"></li>
+                            <li><a class="dropdown-item" href="/profile" th:href="@{/profile}"><i class="bi bi-person text-success me-2"></i>Hồ Sơ Cá Nhân</a></li>
+                            <li th:if="${#strings.equalsIgnoreCase(#strings.replace(#strings.trim(currentUser.role), 'ROLE_', ''), 'SUPER_ADMIN')}"><a class="dropdown-item" href="/admin/root" th:href="@{/admin/root}"><i class="bi bi-shield-check text-danger me-2"></i>Toàn Quyền Hệ Thống</a></li>
+                            <li th:if="${#strings.equalsIgnoreCase(#strings.replace(#strings.trim(currentUser.role), 'ROLE_', ''), 'ADMIN') or #strings.equalsIgnoreCase(#strings.replace(#strings.trim(currentUser.role), 'ROLE_', ''), 'SUPER_ADMIN')}"><a class="dropdown-item" href="/admin/dashboard" th:href="@{/admin/dashboard}"><i class="bi bi-speedometer2 text-primary me-2"></i>Vận Hành Admin</a></li>
+                            <li><a class="dropdown-item" href="/my-orders" th:href="@{/my-orders}"><i class="bi bi-box-seam text-info me-2"></i>Đơn Hàng Của Tôi</a></li>
+                            <li><hr class="dropdown-divider my-2"></li>
+                            <li><a class="dropdown-item text-danger" href="/logout" th:href="@{/logout}"><i class="bi bi-box-arrow-right me-2"></i>Đăng Xuất</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex gap-1" th:if="${currentUser == null}">
+                        <a class="btn btn-outline-primary btn-sm" href="/login" th:href="@{/login}">Đăng Nhập</a>
+                        <a class="btn btn-primary btn-sm" href="/register" th:href="@{/register}">Đăng Ký</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chính Sách Đổi Trả - TechStore</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body class="site-page">
+<header th:replace="fragments/header :: siteHeader"></header>
+
+<main class="container page-shell py-4">
+    <section class="page-hero-mini">
+        <span class="page-kicker">Trợ Giúp</span>
+        <h1 class="page-title">Chính Sách Đổi Trả</h1>
+        <p class="page-subtitle">Chúng tôi cam kết hoàn tiền 100% nếu bạn không hài lòng với sản phẩm.</p>
+    </section>
+
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb app-breadcrumb">
+            <li class="breadcrumb-item"><a href="/" th:href="@{/}">Trang Chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chính Sách Đổi Trả</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-arrow-left-right text-primary me-2"></i>Điều Kiện Đổi/Trả Hàng</h3>
+                <p>TechStore ưu tiên sự hài lòng của khách hàng. Bạn có thể đổi hoặc trả hàng trong các trường hợp sau:</p>
+                <ul>
+                    <li><strong>Sản phẩm bị lỗi/hỏng:</strong> Lỗi kỹ thuật, màn hình nứt, pin không hoạt động...</li>
+                    <li><strong>Sản phẩm không đúng như mô tả:</strong> Khác màu sắc, kích thước, dung lượng...</li>
+                    <li><strong>Không phù hợp:</strong> Bạn không hài lòng với sản phẩm (trong vòng 7 ngày)</li>
+                    <li><strong>Sản phẩm không còn nguyên vẹn:</strong> Chúng tôi sẽ đánh giá tình trạng</li>
+                </ul>
+                <div class="alert alert-info"><i class="bi bi-info-circle me-2"></i><strong>LƯU Ý:</strong> Thời hạn đổi/trả là <strong>30 ngày</strong> kể từ ngày nhận hàng</div>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-check-circle text-success me-2"></i>Điều Kiện Chấp Nhận Đổi/Trả</h3>
+                <p>Để sản phẩm được chấp nhận đổi/trả, vui lòng đảm bảo:</p>
+                <ul>
+                    <li>Sản phẩm còn <strong>nguyên vẹn và đầy đủ</strong> (không có dấu hiệu sử dụng quá mức)</li>
+                    <li><strong>Hộp đóng gói</strong> còn nguyên hoặc ít nhất không bị hỏng nặng</li>
+                    <li><strong>Phiếu bảo hành</strong> và <strong>hóa đơn</strong> còn giữ</li>
+                    <li><strong>Không bị ướt</strong>, không có dấu hiệu va đập mạnh</li>
+                    <li><strong>Không bị cửng cứng hoặc cô lập</strong> (ngâm nước, rơi từ cao...)</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-exclamation-triangle text-danger me-2"></i>Điều Kiện KHÔNG Chấp Nhận Đổi/Trả</h3>
+                <p>Chúng tôi sẽ <strong>không chấp nhận</strong> đổi/trả trong các trường hợp:</p>
+                <ul>
+                    <li>Sản phẩm đã quá 30 ngày kế từ ngày nhận hàng</li>
+                    <li>Sản phẩm có dấu hiệu <strong>sử dụng rõ rệt</strong> (xước, trầy, nứt...)</li>
+                    <li>Hộp hoặc phụ kiện bị <strong>mất cắn</strong> hoặc bỏ dở</li>
+                    <li>Không còn hóa đơn hoặc phiếu bảo hành</li>
+                    <li>Sản phẩm bị <strong>ướt nước</strong> hoặc giữ ẩm cao</li>
+                    <li>Lỗi do <strong>tác động bên ngoài</strong> (va đập, rơi, ngâm nước...)</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-gear text-primary me-2"></i>Quy Trình Đổi/Trả Hàng</h3>
+                <ol>
+                    <li>
+                        <strong>Liên Hệ Hỗ Trợ:</strong>
+                        <ul>
+                            <li>Gọi <strong>1900 1234</strong> hoặc email <strong>support@techstore.vn</strong></li>
+                            <li>Cung cấp mã đơn hàng và lý do đổi/trả</li>
+                            <li>Gửi ảnh/video sản phẩm nếu có vấn đề</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kiểm Duyệt:</strong>
+                        <ul>
+                            <li>Chúng tôi sẽ xem xét yêu cầu trong vòng 24 giờ</li>
+                            <li>Liên hệ bạn để xác nhận và hướng dẫn gửi hàng</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Gửi Hàng Về:</strong>
+                        <ul>
+                            <li>Nếu là lỗi của chúng tôi: <strong>Miễn phí vận chuyển</strong></li>
+                            <li>Nếu là yêu cầu của bạn: Bạn thanh toán phí vận chuyển (khoảng 30-50k VND)</li>
+                            <li>Gửi hàng tới địa chỉ bộ phận hỗ trợ được cung cấp</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kiểm Tra Hàng Về:</strong>
+                        <ul>
+                            <li>Chúng tôi kiểm tra tình trạng sản phẩm</li>
+                            <li>Phản hồi bạn trong vòng 3-5 ngày</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Xử Lý:</strong>
+                        <ul>
+                            <li><strong>Đổi hàng:</strong> Gửi sản phẩm mới trong vòng 2-3 ngày</li>
+                            <li><strong>Trả tiền:</strong> Hoàn tiền 100% trong vòng 5-7 ngày (trừ phí vận chuyển nếu có)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i>Bảo Hành Sản Phẩm</h3>
+                <h6>Thời Gian Bảo Hành:</h6>
+                <ul>
+                    <li><strong>Điện Thoại:</strong> 12 tháng bảo hành chuẩn, tùy nhà sản xuất có thể lên đến 24 tháng</li>
+                    <li><strong>Laptop/Tablet:</strong> 12 tháng bảo hành tiêu chuẩn</li>
+                    <li><strong>Phụ Kiện:</strong> 6-12 tháng tùy loại sản phẩm</li>
+                </ul>
+                <h6>Bảo Hành Bao Gồm:</h6>
+                <ul>
+                    <li>Sửa chữa hoặc thay thế linh kiện bị lỗi</li>
+                    <li>Hỗ trợ kỹ thuật qua điện thoại hoặc email</li>
+                </ul>
+                <h6>Bảo Hành KHÔNG Bao Gồm:</h6>
+                <ul>
+                    <li>Hư hỏng do tác động bên ngoài (rơi, va đập, nước)</li>
+                    <li>Hư hỏng do sửa chữa bởi bên thứ ba</li>
+                    <li>Hư hỏng do sử dụng sai cách</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4">
+                <h3 class="mb-3"><i class="bi bi-question-circle text-primary me-2"></i>Câu Hỏi Thường Gặp</h3>
+                <div class="accordion" id="returnsFaq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#retFaq1">
+                                Nếu tôi đổi hàng, phí vận chuyển sẽ tính như thế nào?
+                            </button>
+                        </h2>
+                        <div id="retFaq1" class="accordion-collapse collapse show" data-bs-parent="#returnsFaq">
+                            <div class="accordion-body">
+                                Nếu đổi do lỗi sản phẩm: <strong>miễn phí vận chuyển hai chiều</strong>. Nếu đổi do yêu cầu của bạn: bạn thanh toán phí vận chuyển lần đầu, chúng tôi thanh toán lần thứ hai.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#retFaq2">
+                                Tôi có thể chọn sản phẩm khác khi đổi không?
+                            </button>
+                        </h2>
+                        <div id="retFaq2" class="accordion-collapse collapse" data-bs-parent="#returnsFaq">
+                            <div class="accordion-body">
+                                Có, bạn có thể chọn sản phẩm khác có giá bằng hoặc thấp hơn. Nếu chọn sản phẩm đắt hơn, cần chi trả thêm hiệu giá.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#retFaq3">
+                                Bao lâu tôi nhận được tiền hoàn lại?
+                            </button>
+                        </h2>
+                        <div id="retFaq3" class="accordion-collapse collapse" data-bs-parent="#returnsFaq">
+                            <div class="accordion-body">
+                                Sau khi chúng tôi xác nhận hàng và duyệt yêu cầu, tiền sẽ được hoàn lại trong vòng <strong>5-7 ngày làm việc</strong> tùy theo ngân hàng của bạn.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#retFaq4">
+                                Nếu sản phẩm có vấn đề sau 30 ngày, tôi có cách nào không?
+                            </button>
+                        </h2>
+                        <div id="retFaq4" class="accordion-collapse collapse" data-bs-parent="#returnsFaq">
+                            <div class="accordion-body">
+                                Hết hạn đổi/trả, bạn vẫn có thể liên hệ chúng tôi để yêu cầu bảo hành. Bảo hành sẽ cover tất cả các lỗi kỹ thuật (không bao gồm lỗi do tác động bên ngoài).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <aside class="col-lg-4">
+            <div class="panel-card p-4 sticky-top" style="top: 20px;">
+                <h5 class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i>Cần Hỗ Trợ?</h5>
+                <div class="d-grid gap-2">
+                    <a href="/contact" class="btn btn-primary btn-sm">
+                        <i class="bi bi-chat-dots me-2"></i>Liên Hệ Chúng Tôi
+                    </a>
+                    <a href="/guide" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-book me-2"></i>Hướng Dẫn Mua Hàng
+                    </a>
+                    <a href="/payment" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-credit-card me-2"></i>Phương Thức Thanh Toán
+                    </a>
+                    <a href="/shipping" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-truck me-2"></i>Chính Sách Vận Chuyển
+                    </a>
+                </div>
+                <hr />
+                <p class="small mb-2"><strong>Email:</strong><br />support@techstore.vn</p>
+                <p class="small mb-0"><strong>Hotline:</strong><br />1900 1234 (8:00 - 22:00)</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer th:replace="fragments/footer :: siteFooter"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

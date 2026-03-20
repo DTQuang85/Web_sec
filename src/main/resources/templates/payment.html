@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phương Thức Thanh Toán - TechStore</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body class="site-page">
+<header th:replace="fragments/header :: siteHeader"></header>
+
+<main class="container page-shell py-4">
+    <section class="page-hero-mini">
+        <span class="page-kicker">Trợ Giúp</span>
+        <h1 class="page-title">Phương Thức Thanh Toán</h1>
+        <p class="page-subtitle">Chúng tôi hỗ trợ nhiều phương thức thanh toán để bạn lựa chọn theo ý muốn.</p>
+    </section>
+
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb app-breadcrumb">
+            <li class="breadcrumb-item"><a href="/" th:href="@{/}">Trang Chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Phương Thức Thanh Toán</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-wallet2 text-primary me-2"></i>Thanh Toán Khi Nhận Hàng (COD)</h3>
+                <p>Phương thức thanh toán an toàn và phổ biến nhất tại Việt Nam.</p>
+                <h6>Cách thức:</h6>
+                <ul>
+                    <li>Chọn "Thanh Toán Khi Nhận Hàng" khi đặt đơn</li>
+                    <li>Nhân viên giao hàng sẽ thu tiền và giao sản phẩm</li>
+                    <li>Kiểm tra sản phẩm trước khi thanh toán</li>
+                    <li>Thanh toán bằng tiền mặt hoặc chuyển khoản ngân hàng</li>
+                </ul>
+                <div class="alert alert-info"><i class="bi bi-info-circle me-2"></i><strong>Thông tin:</strong> Không có phí phụ thêm khi thanh toán COD</div>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-credit-card text-primary me-2"></i>Thanh Toán Qua Thẻ Ngân Hàng</h3>
+                <p>Thanh toán trực tuyến an toàn thông qua các ngân hàng hàng đầu Việt Nam.</p>
+                <h6>Phương thức:</h6>
+                <ul>
+                    <li><strong>Thẻ Tín Dụng/Ghi Nợ:</strong> Visa, Mastercard, JCB</li>
+                    <li><strong>Chuyển Khoản Ngân Hàng:</strong> Hỗ trợ tất cả ngân hàng tại Việt Nam</li>
+                </ul>
+                <h6>Quy Trình:</h6>
+                <ol>
+                    <li>Chọn "Thanh Toán Qua Thẻ/Chuyển Khoản" khi đặt đơn</li>
+                    <li>Nhập thông tin thẻ hoặc thực hiện chuyển khoản</li>
+                    <li>Xác nhận giao dịch (nếu được yêu cầu)</li>
+                    <li>Đợi xác nhận từ hệ thống</li>
+                </ol>
+                <div class="alert alert-success"><i class="bi bi-check-circle me-2"></i><strong>Lợi ích:</strong> Thanh toán tức thì, đơn hàng được xử lý ngay lập tức</div>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-phone text-primary me-2"></i>Thanh Toán Qua Ví Điện Tử</h3>
+                <p>Thanh toán nhanh chóng qua các ứng dụng ví điện tử phổ biến.</p>
+                <h6>Hỗ trợ các ví:</h6>
+                <ul>
+                    <li>Momo</li>
+                    <li>ZaloPay</li>
+                    <li>VnPay</li>
+                    <li>AirPay</li>
+                </ul>
+                <h6>Cách thức:</h6>
+                <ol>
+                    <li>Chọn "Thanh Toán Qua Ví Điện Tử"</li>
+                    <li>Chọn ứng dụng ví của bạn</li>
+                    <li>Xác nhận giao dịch trong ứng dụng</li>
+                    <li>Nhận xác nhận thanh toán</li>
+                </ol>
+            </article>
+
+            <article class="panel-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-exclamation-triangle text-danger me-2"></i>Lưu Ý Bảo Mật</h3>
+                <ul>
+                    <li><strong>Không bao giờ:</strong> Chia sẻ thông tin thẻ, CVV hoặc mã OTP với bất kỳ ai</li>
+                    <li><strong>Kiểm tra:</strong> Đảm bảo bạn đang trên trang web hoặc ứng dụng chính thức</li>
+                    <li><strong>Cảnh báo:</strong> TechStore không bao giờ yêu cầu thông tin thanh toán qua email</li>
+                    <li><strong>Báo cáo:</strong> Nếu nghi ngờ giao dịch gian lận, liên hệ ngay với chúng tôi</li>
+                </ul>
+            </article>
+
+            <article class="panel-card p-4">
+                <h3 class="mb-3"><i class="bi bi-question-circle text-primary me-2"></i>Câu Hỏi Thường Gặp</h3>
+                <div class="accordion" id="paymentFaq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#payFaq1">
+                                Tôi có thể thay đổi phương thức thanh toán sau khi đặt hàng không?
+                            </button>
+                        </h2>
+                        <div id="payFaq1" class="accordion-collapse collapse show" data-bs-parent="#paymentFaq">
+                            <div class="accordion-body">
+                                Vâng, bạn có thể yêu cầu thay đổi phương thức thanh toán trong vòng 24 giờ. Vui lòng liên hệ với bộ phận hỗ trợ khách hàng tại support@techstore.vn.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#payFaq2">
+                                Giao dịch của tôi bị từ chối, phải làm sao?
+                            </button>
+                        </h2>
+                        <div id="payFaq2" class="accordion-collapse collapse" data-bs-parent="#paymentFaq">
+                            <div class="accordion-body">
+                                Điều này có thể do: Số dư không đủ, hạn mức thẻ, hoặc ngân hàng chặn giao dịch. Kiểm tra số dư và thử lại hoặc liên hệ với ngân hàng của bạn.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#payFaq3">
+                                Tôi có được hoàn tiền nếu hủy đơn hàng không?
+                            </button>
+                        </h2>
+                        <div id="payFaq3" class="accordion-collapse collapse" data-bs-parent="#paymentFaq">
+                            <div class="accordion-body">
+                                Có. Nếu hủy trong 24 giờ, tiền sẽ được hoàn lại trong 3-5 ngày làm việc tùy theo ngân hàng.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <aside class="col-lg-4">
+            <div class="panel-card p-4 sticky-top" style="top: 20px;">
+                <h5 class="mb-3"><i class="bi bi-info-circle text-primary me-2"></i>Cần Hỗ Trợ?</h5>
+                <div class="d-grid gap-2">
+                    <a href="/contact" class="btn btn-primary btn-sm">
+                        <i class="bi bi-chat-dots me-2"></i>Liên Hệ Chúng Tôi
+                    </a>
+                    <a href="/guide" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-book me-2"></i>Hướng Dẫn Mua Hàng
+                    </a>
+                    <a href="/shipping" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-truck me-2"></i>Chính Sách Vận Chuyển
+                    </a>
+                    <a href="/returns" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-arrow-left-right me-2"></i>Chính Sách Đổi Trả
+                    </a>
+                </div>
+                <hr />
+                <p class="small mb-2"><strong>Email:</strong><br />support@techstore.vn</p>
+                <p class="small mb-0"><strong>Hotline:</strong><br />1900 1234 (8:00 - 22:00)</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer th:replace="fragments/footer :: siteFooter"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

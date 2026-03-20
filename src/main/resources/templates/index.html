@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechStore - Điện Tử Chính Hãng</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body class="home-page">
+<header th:replace="fragments/header :: siteHeader"></header>
+
+<main class="container py-4">
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb app-breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/}">Trang Chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Showroom Bán Hàng</li>
+        </ol>
+    </nav>
+
+    <section class="hero mb-4">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <span class="hero-kicker"><i class="bi bi-cpu"></i> Hệ sinh thái công nghệ thế hệ mới</span>
+                <h1 class="hero-title">
+                    Thiết Bị Điện Tử Chính Hãng
+                    <span class="headline-accent">Giá tốt nhất thị trường</span>
+                </h1>
+                <p class="hero-desc mb-3">Khám phá laptop, phụ kiện, màn hình, tai nghe và hàng loạt thiết bị công nghệ mới nhất. Giá minh bạch, giao nhanh toàn quốc, trải nghiệm mua sắm mượt và đáng tin cậy.</p>
+                <div class="hero-highlights mb-4">
+                    <span><i class="bi bi-patch-check"></i> Chính hãng 100%</span>
+                    <span><i class="bi bi-truck"></i> Giao nhanh toàn quốc</span>
+                    <span><i class="bi bi-shield-check"></i> Bảo hành rõ ràng</span>
+                </div>
+                <div class="hero-actions d-flex gap-2">
+                    <a class="btn btn-warning text-dark" th:href="@{/products}">Mua Sắm Ngay</a>
+                    <a class="btn btn-outline-light" th:href="@{/products}">Xem Sản Phẩm</a>
+                </div>
+                <div class="hero-tech-tags mt-3">
+                    <span>Gaming Setup</span>
+                    <span>Creator Gear</span>
+                    <span>Office Essentials</span>
+                </div>
+                <div class="hero-metrics mt-3">
+                    <div><strong>15K+</strong><span>Khách hàng</span></div>
+                    <div><strong>2K+</strong><span>Sản phẩm</span></div>
+                    <div><strong>4.9/5</strong><span>Đánh giá</span></div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="hero-banner-frame">
+                    <div id="heroBannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2800" data-bs-pause="false" data-bs-wrap="true">
+                        <div class="carousel-indicators mb-1">
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3 overflow-hidden">
+                            <div class="carousel-item active">
+                                <img class="hero-banner d-block w-100" th:src="@{/images/banner.avif}" alt="banner-1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="hero-banner d-block w-100" th:src="@{/images/banner1.avif}" alt="banner-2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="hero-banner d-block w-100" th:src="@{/images/banner2.avif}" alt="banner-3" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="hero-banner d-block w-100" th:src="@{/images/banner3.avif}" alt="banner-4" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
+
+    <section class="feature-strip mb-4">
+        <article>
+            <span class="feature-strip-icon"><i class="bi bi-lightning-charge-fill"></i></span>
+            <div>
+                <h6>Flash Deal Mỗi Ngày</h6>
+                <p>Ưu đãi theo khung giờ, cập nhật liên tục.</p>
+            </div>
+        </article>
+        <article>
+            <span class="feature-strip-icon"><i class="bi bi-box-seam"></i></span>
+            <div>
+                <h6>Đóng Gói Chuẩn Hãng</h6>
+                <p>Niêm phong nguyên seal, hỗ trợ kiểm tra khi nhận.</p>
+            </div>
+        </article>
+        <article>
+            <span class="feature-strip-icon"><i class="bi bi-headset"></i></span>
+            <div>
+                <h6>Hỗ Trợ 24/7</h6>
+                <p>Tư vấn cấu hình phù hợp từng nhu cầu sử dụng.</p>
+            </div>
+        </article>
+    </section>
+
+    <section id="categories" class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="mb-0">Danh Mục Nổi Bật</h4>
+            <small class="text-muted">Chọn nhanh để lọc</small>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Laptop"><span class="category-icon mb-2"><i class="bi bi-laptop"></i></span><div class="fw-semibold">Laptop</div><small class="text-muted">Máy Tính Xách Tay</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Chuột"><span class="category-icon mb-2"><i class="bi bi-mouse"></i></span><div class="fw-semibold">Chuột</div><small class="text-muted">Gaming &amp; Văn Phòng</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Bàn Phím"><span class="category-icon mb-2"><i class="bi bi-keyboard"></i></span><div class="fw-semibold">Bàn Phím</div><small class="text-muted">Cơ &amp; Không Dây</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Tai Nghe"><span class="category-icon mb-2"><i class="bi bi-headphones"></i></span><div class="fw-semibold">Tai Nghe</div><small class="text-muted">Chống Ồn</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Màn Hình"><span class="category-icon mb-2"><i class="bi bi-display"></i></span><div class="fw-semibold">Màn Hình</div><small class="text-muted">4K &amp; Gaming</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Ổ Cứng SSD"><span class="category-icon mb-2"><i class="bi bi-device-ssd"></i></span><div class="fw-semibold">Ổ Cứng SSD</div><small class="text-muted">Nâng Cấp Tốc Độ</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="Phụ Kiện"><span class="category-icon mb-2"><i class="bi bi-usb-symbol"></i></span><div class="fw-semibold">Phụ Kiện</div><small class="text-muted">Sạc, Cáp, Ốp Lưng</small></button></div>
+            <div class="col-6 col-md-4 col-lg-3"><button type="button" class="w-100 p-3 text-start category-card" data-category="wtach"><span class="category-icon mb-2"><i class="bi bi-smartwatch"></i></span><div class="fw-semibold">Smartwatch</div><small class="text-muted">Smart Wearable</small></button></div>
+        </div>
+    </section>
+
+    <section class="row g-4">
+        <div class="col-lg-3">
+            <div class="filter-card p-3">
+                <div class="filter-head mb-3">
+                    <h5 class="mb-1"><i class="bi bi-sliders2 me-2"></i>Bộ Lọc Sản Phẩm</h5>
+                    <small>Tùy chỉnh nhanh để tìm đúng sản phẩm</small>
+                </div>
+                <form method="get" th:action="@{/products}">
+                    <div class="filter-group mb-3">
+                        <label class="form-label">Tìm Kiếm Theo Tên</label>
+                        <div class="input-with-icon">
+                            <i class="bi bi-search"></i>
+                            <input class="form-control" name="keyword" th:value="${keyword}" placeholder="Nhập tên sản phẩm..." />
+                        </div>
+                    </div>
+
+                    <div class="filter-group mb-3">
+                        <label class="form-label">Khoảng Giá</label>
+                        <div class="row g-2">
+                            <div class="col-6"><input class="form-control" name="minPrice" th:value="${minPrice}" placeholder="Giá Từ" /></div>
+                            <div class="col-6"><input class="form-control" name="maxPrice" th:value="${maxPrice}" placeholder="Đến" /></div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group mb-3">
+                        <label class="form-label">Thương Hiệu</label>
+                        <div class="brand-grid">
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Dell" th:checked="${selectedBrands.contains('Dell')}" /> Dell</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="ASUS" th:checked="${selectedBrands.contains('ASUS')}" /> ASUS</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Apple" th:checked="${selectedBrands.contains('Apple')}" /> Apple</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Logitech" th:checked="${selectedBrands.contains('Logitech')}" /> Logitech</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Samsung" th:checked="${selectedBrands.contains('Samsung')}" /> Samsung</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Sony" th:checked="${selectedBrands.contains('Sony')}" /> Sony</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="MSI" th:checked="${selectedBrands.contains('MSI')}" /> MSI</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Lenovo" th:checked="${selectedBrands.contains('Lenovo')}" /> Lenovo</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="HP" th:checked="${selectedBrands.contains('HP')}" /> HP</label>
+                            <label class="brand-pill"><input type="checkbox" name="brands" value="Acer" th:checked="${selectedBrands.contains('Acer')}" /> Acer</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group mb-3">
+                        <label class="form-label">Danh Mục</label>
+                        <select class="form-select" name="category">
+                            <option value="all" th:selected="${category == null or category == '' or category == 'all'}">Tất Cả</option>
+                            <option value="Laptop" th:selected="${category == 'Laptop'}">Laptop</option>
+                            <option value="PC Gaming" th:selected="${category == 'PC Gaming'}">PC Gaming</option>
+                            <option value="MacBook" th:selected="${category == 'MacBook'}">MacBook</option>
+                            <option value="Màn Hình" th:selected="${category == 'Màn Hình'}">Màn Hình</option>
+                            <option value="Chuột" th:selected="${category == 'Chuột'}">Chuột</option>
+                            <option value="Bàn Phím" th:selected="${category == 'Bàn Phím'}">Bàn Phím</option>
+                            <option value="Tai Nghe" th:selected="${category == 'Tai Nghe'}">Tai Nghe</option>
+                            <option value="Ổ Cứng" th:selected="${category == 'Ổ Cứng'}">Ổ Cứng</option>
+                            <option value="Phụ Kiện" th:selected="${category == 'Phụ Kiện'}">Phụ Kiện</option>
+                            <option value="wtach" th:selected="${category == 'wtach'}">wtach</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group mb-3">
+                        <label class="form-label">Sắp Xếp Theo</label>
+                        <select class="form-select" name="sort">
+                            <option value="default" th:selected="${sort == null or sort == 'default'}">Mặc Định</option>
+                            <option value="priceAsc" th:selected="${sort == 'priceAsc'}">Giá Thấp Đến Cao</option>
+                            <option value="priceDesc" th:selected="${sort == 'priceDesc'}">Giá Cao Đến Thấp</option>
+                            <option value="nameAsc" th:selected="${sort == 'nameAsc'}">Tên A-Z</option>
+                            <option value="nameDesc" th:selected="${sort == 'nameDesc'}">Tên Z-A</option>
+                            <option value="newest" th:selected="${sort == 'newest'}">Mới Nhất</option>
+                            <option value="bestSeller" th:selected="${sort == 'bestSeller'}">Bán Chạy</option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid gap-2 filter-actions">
+                        <button class="btn btn-primary" type="submit">Áp Dụng Bộ Lọc</button>
+                        <a class="btn btn-outline-secondary" th:href="@{/products}">Xóa Bộ Lọc</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="section-head d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Sản Phẩm Nổi Bật</h5>
+                <div class="d-flex align-items-center gap-2">
+                    <small class="text-muted">Hiển Thị <span th:text="${#lists.size(products)}">0</span> Sản Phẩm Trên Tổng Số <span th:text="${totalProducts}">0</span> Sản Phẩm</small>
+                    <button id="gridViewBtn" class="btn btn-sm btn-outline-primary" type="button"><i class="bi bi-grid-3x3-gap"></i></button>
+                    <button id="listViewBtn" class="btn btn-sm btn-outline-primary" type="button"><i class="bi bi-list"></i></button>
+                </div>
+            </div>
+
+            <div id="productGrid" class="row g-3">
+                <div class="col-md-6 col-lg-4 col-xl-3" th:each="product : ${products}">
+                    <div class="card product-card product-card-clickable h-100 border-0 shadow-sm"
+                         th:attr="data-detail-url=@{'/product/' + ${product.id}}">
+                        <span class="product-badge">Deal Hot</span>
+                        <img class="product-image" th:src="${product.image != null and product.image.startsWith('http') ? product.image : '/uploads/' + product.image}" alt="product" />
+                        <div class="card-body d-flex flex-column p-3">
+                            <h6 class="card-title mb-2" th:text="${product.name}">Product</h6>
+                            <p class="card-text text-muted small" th:text="${#strings.abbreviate(product.description, 100)}">Description</p>
+                            <div class="d-flex align-items-center justify-content-between small mb-2">
+                                <span class="rating-stars"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-half"></i></span>
+                                <span class="text-muted">(124 đánh giá)</span>
+                            </div>
+                            <p class="fw-bold text-danger mt-auto mb-2" th:text="${#numbers.formatDecimal(product.price,1,2)} + ' USD'">0</p>
+                            <div class="d-grid gap-2">
+                                <form th:action="@{'/cart/add/' + ${product.id}}" method="post">
+                                    <button class="btn btn-outline-primary btn-sm w-100" type="submit" data-bs-toggle="tooltip" data-bs-title="Thêm vào giỏ">
+                                        <i class="bi bi-cart-plus"></i> Thêm Vào Giỏ
+                                    </button>
+                                </form>
+                                <a class="btn btn-primary btn-sm" th:href="@{'/product/' + ${product.id}}">Xem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer th:replace="fragments/footer :: siteFooter"></footer>
+
+<div id="loadingOverlay" class="loading-overlay d-none" aria-hidden="true">
+    <div class="spinner-border text-light" role="status"></div>
+    <span class="ms-2">Đang tải dữ liệu...</span>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">Action completed.</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
